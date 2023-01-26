@@ -1,4 +1,4 @@
-import 'package:mvvm_template/core/init/enums/locale_keys_enum.dart';
+import 'package:mvvm_template/core/init/enums/preferences_key_enum.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LocaleManager {
@@ -16,9 +16,9 @@ class LocaleManager {
     return;
   }
 
-  Future<void> setStringValue(LocaleKeysEnum key, String value) async {
+  Future<void> setStringValue(PreferencesKeyEnum key, String value) async {
     await _sharedPreferences!.setString(key.toString(), value);
   }
 
-  String getStringValue(LocaleKeysEnum? key) => _sharedPreferences!.getString(key.toString()) ?? "";
+  String getStringValue(PreferencesKeyEnum? key) => _sharedPreferences!.getString(key.toString()) ?? "";
 }
