@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mobx/mobx.dart';
 
-class BaseView<T> extends StatefulWidget {
+class BaseView<T extends Store> extends StatefulWidget {
   const BaseView({
     Key? key,
     required this.viewModel,
